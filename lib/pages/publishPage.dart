@@ -8,9 +8,9 @@ class PublishPage extends StatefulWidget {
 class _PublishPageState extends State<PublishPage> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Center(
-        child: Text('Deneme'),
+    return Scaffold(
+      body: Center(
+        child: Text('publish'),
       ),
     );
   }
