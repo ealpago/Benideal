@@ -29,25 +29,28 @@ class _MyAppState extends State<MyApp> {
 
   final List<Widget> _children = [
     SearchPage(),
-    MessagesPages(),
-    ProfilePage(),
     PublishPage(),
-    TripsPage()
+    TripsPage(),
+    MessagesPages(),
+    ProfilePage()
   ];
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      darkTheme: ThemeData(
+        brightness: Brightness.dark,
+      ),
+      themeMode: ThemeMode.dark,
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: _children[_currentIndex],
         bottomNavigationBar: BottomNavigationBar(
         selectedFontSize: 9.0,
         unselectedFontSize: 9.0,
-        backgroundColor: Colors.grey[850],
         type: BottomNavigationBarType.fixed,
         currentIndex: _currentIndex,
-        selectedItemColor: Colors.white,
-        unselectedItemColor: Colors.white,
+        selectedItemColor: Colors.blueAccent,
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.search),

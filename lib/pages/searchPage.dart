@@ -1,7 +1,7 @@
-import 'package:benideal/pages/tripsPage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
+
 
 class SearchPage extends StatefulWidget {
   @override
@@ -74,43 +74,53 @@ class _SearchPageState extends State<SearchPage> {
                 height: 1.0,
                 margin: EdgeInsets.symmetric(horizontal: 1.0, vertical: 8.0),
                 decoration: BoxDecoration(
-                  color:  Colors.blue
+                  color: Colors.grey
                 ),
               ),
-              Row(
-                children: [
+              Padding(
+                padding: EdgeInsets.only(top: 8.0, bottom: 8.0),
+                child: Row(
+                  children: [
+                      Padding(
+                        padding: EdgeInsets.only(left: 5.0),
+                        child: ElevatedButton(onPressed: (){
+                         print('tapped');
+                        },
+                            child: Text('button',
+                            style: TextStyle(
+                              color: Colors.blueAccent,
+                            ),
+                            ),
+                          style: ButtonStyle(
+                            backgroundColor: MaterialStateProperty.all<Color>(Colors.grey.shade800),
+                          ),
+                        ),
+                      ),
+                    Spacer(),
                     Padding(
-                      padding: EdgeInsets.only(left: 5.0),
-                      child: ElevatedButton(onPressed: (){
-                       print('tapped');
-                      },
-                          child: Text('button',
+                        padding: EdgeInsets.only(right: 5.0),
+                        child: ElevatedButton(onPressed: (){
+                        print('tapped');
+                    },
+                        child: Text('button',
                           style: TextStyle(
                             color: Colors.blueAccent,
                           ),
-                          ),
+                        ),
                         style: ButtonStyle(
                           backgroundColor: MaterialStateProperty.all<Color>(Colors.grey.shade800),
                         ),
-                      ),
                     ),
-                  Spacer(),
-                  Padding(
-                      padding: EdgeInsets.only(right: 5.0),
-                      child: ElevatedButton(onPressed: (){
-                      print('tapped');
-                  },
-                      child: Text('button',
-                        style: TextStyle(
-                          color: Colors.blueAccent,
-                        ),
                       ),
-                      style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all<Color>(Colors.grey.shade800),
-                      ),
-                  ),
-                    ),
-                ],
+                  ],
+                ),
+              ),
+              Container(
+                height: 1.0,
+                margin: EdgeInsets.symmetric(horizontal: 1.0, vertical: 8.0),
+                decoration: BoxDecoration(
+                    color: Colors.grey
+                ),
               ),
          ],
         ),

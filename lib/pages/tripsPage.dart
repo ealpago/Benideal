@@ -9,9 +9,13 @@ class _TripsPageState extends State<TripsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Text('Trips'),
-      ),
+      body: SafeArea(
+        child: Column(
+          children: [
+
+          ],
+        )
+      )
     );
   }
 }
