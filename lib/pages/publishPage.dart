@@ -55,11 +55,29 @@ class _PublishPageState extends State<PublishPage> {
               SizedBox(height: 15.0),
               SizedBox(
                 width: double.infinity,
-                child: FlatButton(
-                  color: Colors.transparent,
-                  onPressed: (){
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.add_location_alt_outlined
+                    ),
+                    ElevatedButton(
+                    style: ButtonStyle(
+                      elevation: MaterialStateProperty.all(0.0),
+                      backgroundColor: MaterialStateProperty.all(Colors.transparent),
+                    ),
+                    onPressed: (){
 
-                  },child: Text('Deneme'),
+                    },child: Text('Mevcut konumu kullan',
+                    style: TextStyle(
+                      fontSize: 18.0
+                    ),
+                    ),
+                  ),
+                    SizedBox(width: 60.0),
+                    Icon(
+                        Icons.chevron_right
+                    ),
+                  ]
                 ),
               )
             ],
