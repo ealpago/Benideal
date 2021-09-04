@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:benideal/utilities/kConstant.dart';
 
 class PublishPage extends StatefulWidget {
   @override
@@ -30,36 +31,11 @@ class _PublishPageState extends State<PublishPage> {
                 ],
               ),
               SizedBox(height: 40.0),
-              TextField(
-                style: TextStyle(
-                    color: Colors.white
-                ),
-                controller: _startingPoint,
-                decoration: InputDecoration(
-                  prefixIcon: Icon(
-                    Icons.search
-                  ),
-                  fillColor: Colors.grey[800],
-                  hintText: 'Kalkış yeri',
-                  hintStyle: TextStyle(
-                      color: Colors.blueGrey
-                  ),
-                  filled: true,
-                  border: OutlineInputBorder(
-                    borderRadius: const BorderRadius.all(
-                      Radius.circular(20.0),
-                    ),
-                  ),
-                ),
-              ),
+              TextFieldWidget(hintText: 'Kalkış Yeri', startingPoint: _startingPoint, icon: Icon(Icons.search)),
               SizedBox(height: 15.0),
               SizedBox(
                 width: double.infinity,
-                child: Row(
-                  children: [
-                    Icon(
-                      Icons.add_location_alt_outlined
-                    ),
+                child:
                     ElevatedButton(
                     style: ButtonStyle(
                       elevation: MaterialStateProperty.all(0.0),
@@ -67,19 +43,24 @@ class _PublishPageState extends State<PublishPage> {
                     ),
                     onPressed: (){
 
-                    },child: Text('Mevcut konumu kullan',
-                    style: TextStyle(
-                      fontSize: 18.0
-                    ),
+                    },child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        Icon(
+                          Icons.my_location_outlined
+                        ),
+                        Text('Mevcut konumu kullan',
+                          style: TextStyle(
+                              fontSize: 18.0
+                          ),
+                        ),
+                        Icon(
+                            Icons.keyboard_arrow_right
+                        ),
+                      ],
                     ),
                   ),
-                    SizedBox(width: 60.0),
-                    Icon(
-                        Icons.chevron_right
-                    ),
-                  ]
-                ),
-              )
+              ),
             ],
           ),
         ),

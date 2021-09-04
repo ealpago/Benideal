@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
+import 'package:benideal/utilities/kConstant.dart';
 
 
 class SearchPage extends StatefulWidget {
@@ -33,66 +34,28 @@ class _SearchPageState extends State<SearchPage> {
                 ],
               ),
               SizedBox(height: 40.0),
-              TextField(
-                style: TextStyle(
-                  color: Colors.white
-                ),
-                controller: _startingPoint,
-                decoration: InputDecoration(
-                  fillColor: Colors.grey[800],
-                  hintText: 'Kalkış yeri',
-                  hintStyle: TextStyle(
-                    color: Colors.blueGrey
-                  ),
-                  filled: true,
-                  border: OutlineInputBorder(
-                    borderRadius: const BorderRadius.all(
-                      Radius.circular(20.0),
-                    ),
-                  ),
-                ),
-              ),
+              TextFieldWidget(hintText: 'Kalkış yeri', startingPoint: _startingPoint,icon: Icon(Icons.location_on_outlined)),
               SizedBox(height: 10.0),
-              TextField(
-                controller: _startingPoint,
-                decoration: InputDecoration(
-                  fillColor: Colors.grey[800],
-                  hintText: 'Varış yeri',
-                  hintStyle: TextStyle(
-                      color: Colors.blueGrey
-                  ),
-                  filled: true,
-                  border: OutlineInputBorder(
-                    borderRadius: const BorderRadius.all(
-                      Radius.circular(20.0),
-                    ),
-                  ),
-                ),
-              ),
+              TextFieldWidget(hintText: 'Varış yeri', startingPoint: _startingPoint, icon: Icon(Icons.location_on_rounded)),
               SizedBox(height: 10.0),
-              Container(
-                height: 1.0,
-                margin: EdgeInsets.symmetric(horizontal: 1.0, vertical: 8.0),
-                decoration: BoxDecoration(
-                  color: Colors.grey
-                ),
-              ),
+              SpaceContainer(),
               Padding(
                 padding: EdgeInsets.only(top: 8.0, bottom: 8.0),
                 child: Row(
                   children: [
-                      Padding(
+                    Padding(
                         padding: EdgeInsets.only(left: 5.0),
                         child: ElevatedButton(onPressed: (){
                          print('tapped');
                         },
-                            child: Text('button',
+                            child: Text('Bugün',
                             style: TextStyle(
                               color: Colors.blueAccent,
                             ),
                             ),
                           style: ButtonStyle(
-                            backgroundColor: MaterialStateProperty.all<Color>(Colors.grey.shade800),
+                            elevation: MaterialStateProperty.all(0.0),
+                            backgroundColor: MaterialStateProperty.all<Color>(Colors.transparent),
                           ),
                         ),
                       ),
@@ -102,26 +65,21 @@ class _SearchPageState extends State<SearchPage> {
                         child: ElevatedButton(onPressed: (){
                         print('tapped');
                     },
-                        child: Text('button',
+                        child: Text('1 yolcu',
                           style: TextStyle(
                             color: Colors.blueAccent,
                           ),
                         ),
                         style: ButtonStyle(
-                          backgroundColor: MaterialStateProperty.all<Color>(Colors.grey.shade800),
+                          elevation: MaterialStateProperty.all(0.0),
+                          backgroundColor: MaterialStateProperty.all<Color>(Colors.transparent),
                         ),
                     ),
                       ),
                   ],
                 ),
               ),
-              Container(
-                height: 1.0,
-                margin: EdgeInsets.symmetric(horizontal: 1.0, vertical: 8.0),
-                decoration: BoxDecoration(
-                    color: Colors.grey
-                ),
-              ),
+              SpaceContainer(),
          ],
         ),
       ),
@@ -129,3 +87,5 @@ class _SearchPageState extends State<SearchPage> {
     );
   }
 }
+
+
