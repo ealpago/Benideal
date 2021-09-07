@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:benideal/utilities/kConstant.dart';
+import 'package:benideal/utilities/textFieldClass.dart';
+
 
 
 class SearchPage extends StatefulWidget {

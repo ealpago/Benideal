@@ -9,13 +9,11 @@ class _TripsPageState extends State<TripsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: Column(
-          children: [
-
-          ],
-        )
-      )
+      appBar: AppBar(
+        title: Text(
+          'Deneme3'
+        ),
+      ),
     );
   }
 }

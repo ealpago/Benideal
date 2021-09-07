@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:benideal/utilities/kConstant.dart';
+import 'package:benideal/utilities/textFieldClass.dart';
 
 class PublishPage extends StatefulWidget {
   @override
@@ -33,6 +33,11 @@ class _PublishPageState extends State<PublishPage> {
               SizedBox(height: 40.0),
               TextFieldWidget(hintText: 'Kalkış Yeri', startingPoint: _startingPoint, icon: Icon(Icons.search)),
               SizedBox(height: 15.0),
+              TextFieldWidget(hintText: 'Varış yeri', startingPoint: _startingPoint, icon: Icon(Icons.search)),
+              SizedBox(height: 15.0),
+              TextFieldWidget(hintText: 'Süre', startingPoint: _startingPoint, icon: Icon(Icons.search)),
+
+
               SizedBox(
                 width: double.infinity,
                 child:

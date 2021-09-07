@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:benideal/button_pages/changeProfile.dart';
+import 'package:benideal/button_pages/messagesPage.dart';
+import 'package:benideal/button_pages/tripsPage.dart';
 
 class ProfilePage extends StatefulWidget {
   @override
@@ -33,30 +36,23 @@ class _ProfilePageState extends State<ProfilePage> {
                 ],
               ),
           ),
-          ElevatedButton(
-            style: ButtonStyle(
-              elevation: MaterialStateProperty.all(0.0),
-              backgroundColor: MaterialStateProperty.all(Colors.transparent),
-            ),
-            onPressed: (){
+          SizedBox(height: 30.0),
+          TextButton(
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) => ChangeProfile()));
+          }, child: Text('Deneme1'),),
 
-            },child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              Icon(
-                  Icons.my_location_outlined
-              ),
-              Text('Mevcut konumu kullan',
-                style: TextStyle(
-                    fontSize: 18.0
-                ),
-              ),
-              Icon(
-                  Icons.keyboard_arrow_right
-              ),
-            ],
-          ),
-          ),
+          SizedBox(height: 30.0),
+          TextButton(
+            onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context) => MessagePage()));
+            }, child: Text('Deneme2'),),
+
+          SizedBox(height: 30.0),
+          TextButton(
+            onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context) => TripsPage()));
+            }, child: Text('Deneme3'),),
         ],
       )
     );

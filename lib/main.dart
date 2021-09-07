@@ -1,9 +1,8 @@
 import 'package:benideal/pages/searchPage.dart';
 import 'package:flutter/material.dart';
 import 'package:benideal/pages/profilePage.dart';
-import 'package:benideal/pages/messagesPage.dart';
 import 'package:benideal/pages/publishPage.dart';
-import 'package:benideal/pages/tripsPage.dart';
+
 
 
 void main() {
@@ -30,8 +29,6 @@ class _MyAppState extends State<MyApp> {
   final List<Widget> _children = [
     SearchPage(),
     PublishPage(),
-    TripsPage(),
-    MessagesPages(),
     ProfilePage()
   ];
 
@@ -59,14 +56,6 @@ class _MyAppState extends State<MyApp> {
           BottomNavigationBarItem(
             icon: new Icon(Icons.add_circle_outline,),
             label: 'Yayınla',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.car_rental,),
-            label: 'Yolculuklarım',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.message_sharp,),
-            label: 'Gelen Kutusu',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person_outline,),
