@@ -1,3 +1,4 @@
+import 'package:benideal/utilities/kConstant.dart';
 import 'package:flutter/material.dart';
 import 'package:benideal/button_pages/changeProfile.dart';
 import 'package:benideal/button_pages/messagesPage.dart';
@@ -37,22 +38,28 @@ class _ProfilePageState extends State<ProfilePage> {
               ),
           ),
           SizedBox(height: 30.0),
+          SpaceContainer(),
           TextButton(
               onPressed: (){
                 Navigator.push(context, MaterialPageRoute(builder: (context) => ChangeProfile()));
-          }, child: Text('Deneme1'),),
-
+          }, child: Text('Profili düzenle'),),
+          SpaceContainer(),
           SizedBox(height: 30.0),
+          SpaceContainer(),
           TextButton(
             onPressed: (){
               Navigator.push(context, MaterialPageRoute(builder: (context) => MessagePage()));
-            }, child: Text('Deneme2'),),
-
+            }, child: Text('Gelen kutusu'),),
+          SpaceContainer(),
           SizedBox(height: 30.0),
+          SpaceContainer(),
           TextButton(
             onPressed: (){
               Navigator.push(context, MaterialPageRoute(builder: (context) => TripsPage()));
-            }, child: Text('Deneme3'),),
+            }, child: Text('Yolculuklarım'),),
+          SpaceContainer(),
+
+
         ],
       )
     );

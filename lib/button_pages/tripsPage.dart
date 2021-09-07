@@ -11,7 +11,7 @@ class _TripsPageState extends State<TripsPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Deneme3'
+          'Geçmiş yolculuklarım'
         ),
       ),
     );

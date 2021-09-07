@@ -1,3 +1,4 @@
+import 'package:benideal/utilities/kConstant.dart';
 import 'package:flutter/material.dart';
 
 
@@ -12,8 +13,32 @@ class _ChangeProfileState extends State<ChangeProfile> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('deneme1'
+        title: Text('Profili düzenle'
             ),
+      ),
+      body: Container(
+           child: Column(
+             children: [
+               SizedBox(height: 30.0),
+               SpaceContainer(),
+               TextButton(
+                 onPressed: (){
+                 }, child: Text('Profili düzenle'),),
+               SpaceContainer(),
+               SizedBox(height: 30.0),
+               SpaceContainer(),
+               TextButton(
+                 onPressed: (){
+                 }, child: Text('Gelen kutusu'),),
+               SpaceContainer(),
+               SizedBox(height: 30.0),
+               SpaceContainer(),
+               TextButton(
+                 onPressed: (){
+                 }, child: Text('Yolculuklarım'),),
+               SpaceContainer(),
+             ],
+           ),
       ),
     );
   }
