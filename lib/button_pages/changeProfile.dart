@@ -23,7 +23,7 @@ class _ChangeProfileState extends State<ChangeProfile> {
                SpaceContainer(),
                TextButton(
                  onPressed: (){
-                 }, child: Text('Profili düzenle'),),
+                 }, child: Text('Profil resmini değiştir'),),
                SpaceContainer(),
                SizedBox(height: 30.0),
                SpaceContainer(),

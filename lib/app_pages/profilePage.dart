@@ -1,3 +1,5 @@
+import 'package:benideal/open_pages/firstPage.dart';
+import 'package:benideal/open_pages/loginPage.dart';
 import 'package:benideal/utilities/kConstant.dart';
 import 'package:flutter/material.dart';
 import 'package:benideal/button_pages/changeProfile.dart';
@@ -58,8 +60,22 @@ class _ProfilePageState extends State<ProfilePage> {
               Navigator.push(context, MaterialPageRoute(builder: (context) => TripsPage()));
             }, child: Text('Yolculuklarım'),),
           SpaceContainer(),
-
-
+          TextButton(
+            style: ButtonStyle(
+              backgroundColor: MaterialStateProperty.all(Colors.red)
+            ),
+            onPressed: (){
+            Navigator.pushAndRemoveUntil(
+              context,
+              MaterialPageRoute(builder: (context) => FirstPage()),
+                  (Route<dynamic> route) => false,
+            );
+          },child: Text('Çıkış yap',
+          style: TextStyle(
+            color: Colors.white
+          ),),
+            
+          )
         ],
       )
     );
