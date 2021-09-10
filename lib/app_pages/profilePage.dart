@@ -1,9 +1,7 @@
 import 'package:benideal/open_pages/firstPage.dart';
-import 'package:benideal/open_pages/loginPage.dart';
 import 'package:benideal/utilities/kConstant.dart';
 import 'package:flutter/material.dart';
 import 'package:benideal/button_pages/changeProfile.dart';
-import 'package:benideal/button_pages/messagesPage.dart';
 import 'package:benideal/button_pages/tripsPage.dart';
 
 class ProfilePage extends StatefulWidget {
@@ -50,16 +48,10 @@ class _ProfilePageState extends State<ProfilePage> {
           SpaceContainer(),
           TextButton(
             onPressed: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context) => MessagePage()));
-            }, child: Text('Gelen kutusu'),),
-          SpaceContainer(),
-          SizedBox(height: 30.0),
-          SpaceContainer(),
-          TextButton(
-            onPressed: (){
               Navigator.push(context, MaterialPageRoute(builder: (context) => TripsPage()));
             }, child: Text('Yolculuklarım'),),
           SpaceContainer(),
+          SizedBox(height: 30.0),
           TextButton(
             style: ButtonStyle(
               backgroundColor: MaterialStateProperty.all(Colors.red)

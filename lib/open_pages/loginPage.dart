@@ -26,7 +26,7 @@ class _LoginPageState extends State<LoginPage> {
             children: [
               TextFieldWidget(hintText: 'email', startingPoint: _startingPoint, icon: Icon(Icons.mail_outline)),
               SizedBox(height: 20.0,),
-              TextFieldWidget(hintText: 'email', startingPoint: _startingPoint, icon: Icon(Icons.mail_outline)),
+              TextFieldWidget(hintText: 'şifre', startingPoint: _startingPoint, icon: Icon(Icons.remove_red_eye_outlined)),
               SizedBox(height: 20.0,),
               TextButton(onPressed: (){
                 Navigator.pushAndRemoveUntil(

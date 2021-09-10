@@ -1,3 +1,6 @@
+import 'package:benideal/button_pages/changeInfo.dart';
+import 'package:benideal/button_pages/changePassword.dart';
+import 'package:benideal/button_pages/changePhoto.dart';
 import 'package:benideal/utilities/kConstant.dart';
 import 'package:flutter/material.dart';
 
@@ -23,19 +26,22 @@ class _ChangeProfileState extends State<ChangeProfile> {
                SpaceContainer(),
                TextButton(
                  onPressed: (){
+                   Navigator.push(context, MaterialPageRoute(builder: (context) => ChangePhoto()));
                  }, child: Text('Profil resmini değiştir'),),
                SpaceContainer(),
                SizedBox(height: 30.0),
                SpaceContainer(),
                TextButton(
                  onPressed: (){
-                 }, child: Text('Gelen kutusu'),),
+                   Navigator.push(context, MaterialPageRoute(builder: (context) => ChangePassword()));
+                 }, child: Text('Şifreyi değiştir'),),
                SpaceContainer(),
                SizedBox(height: 30.0),
                SpaceContainer(),
                TextButton(
                  onPressed: (){
-                 }, child: Text('Yolculuklarım'),),
+                   Navigator.push(context, MaterialPageRoute(builder: (context) => ChangeInfo()));
+                 }, child: Text('Özgeçmişi güncelle'),),
                SpaceContainer(),
              ],
            ),

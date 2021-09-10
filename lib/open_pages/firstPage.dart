@@ -23,46 +23,58 @@ class _FirstPageState extends State<FirstPage> {
           ),
         ),
         body: SafeArea(
-          child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
-            child: Column(
-
-
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                Text('Senin yolculuğun. Senin seçimin',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 45
-                ),),
-                ElevatedButton(onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => LoginPage()));
-                  print('Login');
-                }, child: Text('Giriş Yap'),
-                    style: ButtonStyle(
-                      fixedSize: MaterialStateProperty.all(Size(double.maxFinite,double.nan)),
-                        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                            RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(18.0),
-                            )
-                        )
-                    ),),
-                ElevatedButton(onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => SignPage()));
-                  print('signup');
-                }, child: Text('Kaydol'),
-                    style: ButtonStyle(
-                        fixedSize: MaterialStateProperty.all(Size(double.maxFinite,double.nan)),
-                        backgroundColor: MaterialStateProperty.all(Colors.transparent),
-                        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                            RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(18.0),
-                            )
-                        )
-                    )
+          child: Column(
+            children: [
+              Container(
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage(
+                      'benidealLogo.png'
+                    ),
+                    fit: BoxFit.contain
+                  ),
                 ),
-                ],
-            ),
+              ),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Text('Senin yolculuğun. Senin seçimin',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 45
+                    ),),
+                    ElevatedButton(onPressed: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => LoginPage()));
+                      print('Login');
+                    }, child: Text('Giriş Yap'),
+                        style: ButtonStyle(
+                          fixedSize: MaterialStateProperty.all(Size(double.maxFinite,double.nan)),
+                            shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                                RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(18.0),
+                                )
+                            )
+                        ),),
+                    ElevatedButton(onPressed: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => SignPage()));
+                      print('signup');
+                    }, child: Text('Kaydol'),
+                        style: ButtonStyle(
+                            fixedSize: MaterialStateProperty.all(Size(double.maxFinite,double.nan)),
+                            backgroundColor: MaterialStateProperty.all(Colors.transparent),
+                            shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                                RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(18.0),
+                                )
+                            )
+                        )
+                    ),
+                    ],
+                ),
+              ),
+            ],
           ),
         ),
       ),
