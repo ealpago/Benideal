@@ -138,16 +138,10 @@ class _PublishPageState extends State<PublishPage> {
                     },child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-                        Icon(
-                          Icons.my_location_outlined
-                        ),
-                        Text('Mevcut konumu kullan',
+                        Text('Yayınla',
                           style: TextStyle(
                               fontSize: 18.0
                           ),
-                        ),
-                        Icon(
-                            Icons.keyboard_arrow_right
                         ),
                       ],
                     ),

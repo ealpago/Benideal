@@ -23,18 +23,7 @@ class _FirstPageState extends State<FirstPage> {
           ),
         ),
         body: SafeArea(
-          child: Column(
-            children: [
-              Container(
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage(
-                      'benidealLogo.png'
-                    ),
-                    fit: BoxFit.contain
-                  ),
-                ),
-              ),
+          child:
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
                 child: Column(
@@ -74,11 +63,9 @@ class _FirstPageState extends State<FirstPage> {
                     ],
                 ),
               ),
-            ],
           ),
         ),
-      ),
-    );
+      );
   }
 }
 
